@@ -21,7 +21,7 @@
 </head>
 
 <body class="bg-[#4988C4] text-slate-900 antialiased" x-data="{ mobileMenuOpen: false }">
-    
+
     <header class="top-0 w-full z-50">
         <nav>
             <div
@@ -78,8 +78,7 @@
                 { route: '#', title: 'Login' },
                 { route: '#', title: 'Sign Up' }
             ] 
-            }" x-show="mobileMenuOpen" x-cloak
-                class="md:hidden bg-[#4988C4] px-8 pb-8 space-y-4 shadow-md">
+            }" x-show="mobileMenuOpen" x-cloak class="md:hidden bg-[#4988C4] px-8 pb-8 space-y-4 shadow-md">
 
                 <template x-for="(link, index) in links" :key="index">
                     <a :href="link.route" x-text="link.title" class="text-base font-medium text-[#FCFDFD] block"></a>
@@ -170,7 +169,7 @@
                         class="bg-[#4988C4] rounded-xl p-4 md:p-6 md:min-h-[16rem]  flex flex-col items-center justify-center border border-white/20">
                         <div class="mb-4">
                             <img :src="item.img" :alt="item.title"
-                                class="h-16 md:h-8 w-auto object-contain brightness-0 invert">
+                                class="h-16 w-auto object-contain brightness-0 invert">
                         </div>
                         <div class="">
                             <h2 class="w-full text-center font-semibold text-md md:text-xl text-[#FCFDFD] pb-2"
@@ -187,7 +186,7 @@
     </section>
 
     <!-- How It Works -->
-    <section class="w-full relative pt-8 bg-white">
+    <section class="w-full h-auto relative py-8 bg-white">
         <div class="max-w-7xl lg:max-w-8xl mx-auto relative z-10 mx-auto md:px-[60px] px-6">
             <div class="flex flex-col sm:flex-row sm:items-center">
                 <span class="whitespace-nowrap text-lg md:text-3xl font-semibold text-[#4988C4]">
@@ -195,13 +194,10 @@
                 </span>
                 <div class="mt-2 sm:mt-0 sm:ml-4 h-[2px] flex-grow bg-[#4988C4]"></div>
             </div>
-            <div class="flex flex-col md:flex-row gap-4 items-center">
-
-                <div class="w-full md:w-1/2 flex justify-center">
-                    <img src="images/computer.png" alt="Device" class="h-2xl object-contain pr-6 md:px-auto">
-                </div>
-
-                <div class="w-full md:w-1/2 flex flex-col gap-4" x-data="{
+            <div class="w-full md:pl-6 pb-2 flex justify-center">
+                <img src="images/howItworks.png" class="object-contain">
+            </div>
+            <div class="w-full grid grid-cols-4 gap-2" x-data="{
                     how:[
                             {sn:'1', data:'Get username from MeroIRD'},
                             {sn:'2', data:'Set up IRD credentials'},
@@ -209,16 +205,14 @@
                             {sn:'4', data:'Automatic data sync'},
                         ]
                     }">
-                    <template x-for="(item, index) in how" :key="index">
-                        <div
-                            class="flex items-center w-full border-2 rounded-xl border-[#4988C4] px-4 py-2 md:p-6 bg-white/5">
-                            <span
-                                class="flex items-center justify-center w-8 h-8 shrink-0 bg-[#2C5276] text-white rounded-full text-xs md:text-lg font-bold"
-                                x-text="item.sn"></span>
-                            <span class="pl-4 text-[#4E4E4E] text-sm md:text-xl font-medium" x-text="item.data"></span>
-                        </div>
-                    </template>
-                </div>
+                <template x-for="(item, index) in how" :key="index">
+                    <div class="flex items-center w-full border-2 rounded-xl border-[#4988C4] px-3 py-3 bg-white/5">
+                        <span
+                            class="flex items-center justify-center w-8 h-8 shrink-0 bg-[#2C5276] text-white rounded-full text-xs md:text-lg font-bold"
+                            x-text="item.sn"></span>
+                        <span class="pl-2 text-[#4E4E4E] text-sm md:text-xl font-medium" x-text="item.data"></span>
+                    </div>
+                </template>
             </div>
         </div>
     </section>
@@ -417,13 +411,17 @@
                                 Complain & Inquiry: 3
                             </p>
                         </div>
-                        <div>
-                            <p class="text-[#4988C4] text-sm md:text-xl font-medium">
-                                Support: 2
-                            </p>
-                            <p class="text-[#4988C4] text-sm md:text-xl font-medium">
-                                Helpline: 0
-                            </p>
+                        <div class="flex flex-col justify-end items-end">
+                            <div>
+                                <p class="text-[#4988C4] text-sm md:text-xl font-medium">
+                                    Support: 2
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-[#4988C4] text-sm md:text-xl font-medium">
+                                    Helpline: 0
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
