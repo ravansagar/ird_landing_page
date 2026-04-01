@@ -33,7 +33,7 @@
                     <span class="font-bold font-['Inter'] text-xl text-white tracking-tight">Mero IRD</span>
                 </div>
 
-                <div class="hidden md:flex space-x-8 font-medium text-slate-600">
+                <div class="hidden lg:flex space-x-8 font-medium text-slate-600">
                     <a href="#"
                         class="font-['Inter'] font-medium text-base text-white leading-6 tracking-normal text-slate-900">Home</a>
                     <a href="#"
@@ -44,7 +44,7 @@
                         Us</a>
                 </div>
 
-                <div class="hidden md:flex space-x-2 font-medium">
+                <div class="hidden lg:flex space-x-2 font-medium">
                     <a href="#"
                         class="bg-white px-4 py-2 mx-2 rounded-md font-['Inter'] font-medium text-[#4988C4] leading-6 tracking-normal">Sign
                         in</a>
@@ -53,7 +53,7 @@
                         up</a>
                 </div>
 
-                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 text-white">
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden p-2 text-white">
 
                     <svg x-show="!mobileMenuOpen" class="w-6 h-6" width="22" height="22" viewBox="0 0 22 22" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +78,7 @@
                 { route: '#', title: 'Login' },
                 { route: '#', title: 'Sign Up' }
             ] 
-            }" x-show="mobileMenuOpen" x-cloak class="md:hidden bg-[#4988C4] px-8 pb-8 space-y-4 shadow-md">
+            }" x-show="mobileMenuOpen" x-cloak class="lg:hidden bg-[#4988C4] md:-my-4 px-8 md:px-12 pb-8 space-y-4 shadow-md">
 
                 <template x-for="(link, index) in links" :key="index">
                     <a :href="link.route" x-text="link.title" class="text-base font-medium text-[#FCFDFD] block"></a>
@@ -91,23 +91,23 @@
     <section class="w-full bg-white min-h-[50vh] md:pt-8 flex items-center">
         <div class="max-w-7xl bg-full mx-auto w-full">
             <div
-                class="grid grid-col-1 md:grid-cols-2 items-center pb-4 px-6 md:px-[60px] shadow-[0_5px_2px_-5px_rgba(0,0,0,0.3)]">
-                <div class="w-full h-[25vh] md:h-[50vh] py-8 md:py-4 lg:-mt-12 lg:mb-8 lg:pt-28">
-                    <h2 class="font-bold text-2xl md:text-3xl lg:text-4xl text-[#4988C4] mb-2">
+                class="grid grid-col-1 lg:grid-cols-2 items-center pb-4 px-6 md:px-[60px] shadow-[0_5px_2px_-5px_rgba(0,0,0,0.3)]">
+                <div class="w-full h-[40vh] md:h-[20vh] lg:h-[50vh] py-8 md:py-4 lg:-mt-12 lg:mb-8 lg:pt-28">
+                    <h2 class="font-bold text-2xl md:text-2xl lg:text-4xl text-[#4988C4] mb-2">
                         Empowering Tax Solutions for a Digital Nepal
                     </h2>
 
-                    <p class="text-[#4988C4] text-md md:text-lg lg:text-2xl mb-6">
+                    <p class="text-[#4988C4] text-md md:text-md lg:text-2xl mb-6">
                         Manage your taxes with ease and efficiency.
                     </p>
 
-                    <div class="flex flex-row gap-4 !z-100">
+                    <div class="w-[40%] md:w-full flex flex-col md:flex-row gap-4 !z-100">
                         <button
-                            class="px-8 py-2 md:py-3 bg-[#4988C4] text-sm md:text-md text-white rounded-lg font-bold">
+                            class="px-8 md:px-12 lg:px-8 py-2 md:py-3 bg-[#4988C4] text-sm md:text-md text-white rounded-lg font-bold">
                             Get Started
                         </button>
                         <button
-                            class="px-8 py-2 md:py-3 border-2 border-[#4988C4] text-[#4988C4] text-sm md:text-md rounded-lg font-bold">
+                            class="px-8 md:px-12 lg:px-8 py-2 md:py-3 border-2 border-[#4988C4] text-[#4988C4] text-sm md:text-md rounded-lg font-bold">
                             Sign in
                         </button>
                     </div>
@@ -123,21 +123,21 @@
 
     <!-- Common features -->
     <section class="w-full relative bg-white">
-        <div class="max-w-7xl md:pl-[60px] mx-6 md:mx-auto z-10 -mt-5">
-            <div class="flex flex-col md:flex-row gap-1 md:gap-0">
+        <div class="max-w-7xl lg:pl-[60px] md:mx-6 lg:mx-auto z-10 -mt-5">
+            <div class="flex flex-col lg:flex-row gap-1 px-8 lg:px-auto lg:gap-0">
 
                 <div
-                    class="text-sm py-2 px-4 bg-[#C7DAED] md:bg-[#E4EDF6] text-[#213D58] border-2 border-[#C7DAED] rounded-md md:rounded-none md:rounded-tl-md md:rounded-bl-md md:rounded-tl-md md:rounded-bl-md flex md:justify-center">
+                    class="text-sm py-2 px-4 bg-[#E4EDF6] text-[#213D58] border-2 border-[#C7DAED] rounded-md lg:rounded-none lg:rounded-tl-md lg:rounded-bl-md lg:rounded-tl-md lg:rounded-bl-md flex lg:justify-center">
                     IRD Compliant System
                 </div>
 
                 <div
-                    class="text-sm py-2 px-4 bg-[#C7DAED] md:bg-[#E4EDF6] text-[#213D58] border-2 border-y-2 md:border-x-0 border-[#C7DAED] rounded-md md:rounded-none flex md:justify-center">
+                    class="text-sm py-2 px-4 bg-[#E4EDF6] text-[#213D58] border-2 border-y-2 lg:border-x-0 border-[#C7DAED] rounded-md lg:rounded-none flex lg:justify-center">
                     Built for Nepal Tax System
                 </div>
 
                 <div
-                    class="text-sm py-2 px-4 bg-[#C7DAED] md:bg-[#E4EDF6] text-[#213D58] border-2 border-[#C7DAED] rounded-md md:rounded-none md:rounded-tr-md md:rounded-br-md md:rounded-tr-md md:rounded-br-md flex md:justify-center">
+                    class="text-sm py-2 px-4 bg-[#E4EDF6] text-[#213D58] border-2 border-[#C7DAED] rounded-md lg:rounded-none lg:rounded-tr-md lg:rounded-br-md lg:rounded-tr-md lg:rounded-br-md flex lg:justify-center">
                     Secure & Reliable
                 </div>
 
@@ -189,15 +189,15 @@
     <section class="w-full h-auto relative py-8 bg-white">
         <div class="max-w-7xl lg:max-w-8xl mx-auto relative z-10 mx-auto md:px-[60px] px-6">
             <div class="flex flex-col sm:flex-row sm:items-center">
-                <span class="whitespace-nowrap text-lg md:text-3xl font-semibold text-[#4988C4]">
+                <span class="whitespace-nowrap text-lg md:text-xl lg:text-3xl font-semibold text-[#4988C4]">
                     How It Works
                 </span>
                 <div class="mt-2 sm:mt-0 sm:ml-4 h-[2px] flex-grow bg-[#4988C4]"></div>
             </div>
-            <div class="w-full md:pl-6 pb-2 flex justify-center">
+            <div class="w-full py-6 md:py-auto md:pl-6 pb-2 flex justify-center">
                 <img src="images/howItworks.png" class="object-contain">
             </div>
-            <div class="w-full grid grid-cols-4 gap-2" x-data="{
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2" x-data="{
                     how:[
                             {sn:'1', data:'Get username from MeroIRD'},
                             {sn:'2', data:'Set up IRD credentials'},
@@ -208,9 +208,9 @@
                 <template x-for="(item, index) in how" :key="index">
                     <div class="flex items-center w-full border-2 rounded-xl border-[#4988C4] px-3 py-3 bg-white/5">
                         <span
-                            class="flex items-center justify-center w-8 h-8 shrink-0 bg-[#2C5276] text-white rounded-full text-xs md:text-lg font-bold"
+                            class="flex items-center justify-center w-8 h-8 shrink-0 bg-[#2C5276] text-white rounded-full text-xs md:text-base lg:text-lg font-bold"
                             x-text="item.sn"></span>
-                        <span class="pl-2 text-[#4E4E4E] text-sm md:text-xl font-medium" x-text="item.data"></span>
+                        <span class="pl-2 text-[#4E4E4E] text-xs md:text-lg font-semibold" x-text="item.data"></span>
                     </div>
                 </template>
             </div>
@@ -230,12 +230,12 @@
                     ] 
                 }">
                 <div class="flex flex-col sm:flex-row sm:items-center">
-                    <span class="text-lg sm:text-3xl font-semibold text-[#4988C4] leading-tight">
+                    <span class="text-lg md:text-xl lg:text-3xl font-semibold text-[#4988C4] leading-tight">
                         Flexible Pricing Based on Business Needs
                     </span>
                     <div class="mt-2 sm:mt-0 sm:ml-4 h-[2px] flex-grow bg-[#4988C4]"></div>
                 </div>
-                <h2 class="text-sm md:text-xl text-[#4E4E4E] py-2 tracking-tight">
+                <h2 class="text-xs md:text-xl text-[#4E4E4E] py-2 tracking-tight">
                     Choose the modules you need or get the complete system with all features
                 </h2>
                 <h2 class="bg-[#EDEDED] w-fit px-4 py-2 rounded-md text-[#4E4E4E] text-xs md:text-md">
@@ -247,7 +247,7 @@
                             class="flex flex-col h-full bg-[#FCFDFD] p-3 md:p-4 rounded-md border-2 border-[#E4E4E4] justify-center shadow-sm">
                             <div class="flex-grow">
                                 <div class="flex items-center justify-center mb-2">
-                                    <img :src="item.img" class="w-12 h-12 " />
+                                    <img :src="item.img" class="w-8 h-8 md:w-12 md:h-12" />
                                 </div>
                                 <h3 class="text-sm font-semibold text-[#4E4E4E] text-center text-md py-1 md:text-lg"
                                     x-text="item.title">
@@ -257,7 +257,7 @@
                                 </p>
                             </div>
                             <div class="mx-auto justify-center w-full flex flex-col pt-2 gap-2">
-                                <h3 class="text-[#4988C4] font-semibold text-lg text-center md:text-lg"
+                                <h3 class="text-[#4988C4] font-semibold text-sm text-center md:text-lg"
                                     x-text="item.price"></h3>
                                 <button
                                     class="text-[#4988C4] hover:bg-[#4988C4] hover:text-white text-sm font-semibold md:text-md w-full py-2 rounded-md md:rounded-md border border-[#4988C4]">Try
@@ -281,11 +281,11 @@
             }">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-start">
                     <div class="lg:col-span-1">
-                        <h2 class="text-xl md:text-3xl py-4 font-semibold text-[#4988C4] tracking-tight">
+                        <h2 class="text-lg md:text-xl lg:text-3xl py-4 font-semibold text-[#4988C4] tracking-tight">
                             Additional Add-Ons
                         </h2>
                     </div>
-                    <div class="md:col-span-2 lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="md:col-span-2 lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-4">
                         <template x-for="(item, index) in addOns" :key="index">
                             <div class="flex border-2 border-[#E4E4E4] rounded-md shadow-sm px-3 py-4 bg-white">
                                 <div class="w-12 flex items-center">
@@ -321,7 +321,7 @@
                 ]
             }">
                 <div class="flex flex-col sm:flex-row sm:items-center">
-                    <h2 class="text-lg md:text-3xl md:py-4 font-semibold text-[#4988C4] tracking-tight">
+                    <h2 class="text-lg md:text-xl lg:text-3xl md:py-4 font-semibold text-[#4988C4] tracking-tight">
                         Testimonials
                     </h2>
                     <div class="mt-2 sm:mt-0 sm:ml-4 h-[2px] flex-grow bg-[#4988C4]"></div>
@@ -329,7 +329,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 pt-6">
                     <template x-for="(user, index) in testimonials" :key="index">
-                        <div class="border-2 border-[#E4E4E4] rounded-md shadow-sm px-6 py-4">
+                        <div class="border-2 border-[#E4E4E4] rounded-2xl shadow-sm px-6 py-4">
                             <div class="flex flex-row gap-0 pb-1" x-data="{}">
                                 <template x-for="i in 5" :key="i">
                                     <img src="images/star.svg" class="w-6" />
@@ -404,21 +404,21 @@
                             </a>
                         </div>
                         <div>
-                            <p class="text-[#4988C4] text-sm md:text-xl font-medium">
+                            <p class="text-[#213D58] text-sm md:text-xl font-medium">
                                 New Account & Billing: 1
                             </p>
-                            <p class="text-[#4988C4] text-sm md:text-xl font-medium">
+                            <p class="text-[#213D58] text-sm md:text-xl font-medium">
                                 Complain & Inquiry: 3
                             </p>
                         </div>
-                        <div class="flex flex-col justify-end items-end">
+                        <div class="flex flex-col md:justify-end md:items-end">
                             <div>
-                                <p class="text-[#4988C4] text-sm md:text-xl font-medium">
+                                <p class="text-[#213D58] text-sm md:text-xl font-medium">
                                     Support: 2
                                 </p>
                             </div>
                             <div>
-                                <p class="text-[#4988C4] text-sm md:text-xl font-medium">
+                                <p class="text-[#213D58] text-sm md:text-xl font-medium">
                                     Helpline: 0
                                 </p>
                             </div>
@@ -435,7 +435,7 @@
     <!-- Footer -> Company Info -->
     <footer class="w-full relative pb-4 bg-[#4988C4]">
         <div class="max-w-7xl lg:max-w-8xl mx-6 md:mx-auto">
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 py-8 md:px-8 gap-4 overflow-hidden">
+            <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 py-8 md:px-8 gap-4 overflow-hidden">
                 <div class="flex flex-col gap-1 md:px-6 -pr-8 col-span-2">
                     <div class="flex flex-row gap-2">
                         <img src="images/logo.png" class="brightness-0 invert h-6 w-8" />
@@ -456,7 +456,7 @@
                     <a href="#" class="text-[#FCFDFD] text-xs md:text-lg">Terms and conditions</a>
                 </div>
 
-                <div class="flex flex-col md:col-span-2 lg:col-span-1">
+                <div class="flex flex-col md:col-span-2 lg:col-span-1 md:pl-6 lg:pl-auto">
                     <h2 class="text-[#FCFDFD] font-semibold text-md md:text-xl pb-1">Contact Info</h2>
                     <h3 class="flex gap-2 text-[#FCFDFD] text-xs md:text-lg">
                         <svg width="18" height="20" viewBox="0 0 20 20" class="h-3 md:h-auto" fill="none"
